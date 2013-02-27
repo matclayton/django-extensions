@@ -24,6 +24,7 @@ class Command(BaseCommand):
         make_option('--include', '-i', action='append', dest='includes',
                     default=[], help="Append these paths to TEMPLATE_DIRS")
     )
+    requires_model_validation = False
 
     def handle(self, *args, **options):
         from django.conf import settings
